@@ -1,30 +1,38 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Welcome from "./Screens/Welcome";
+import Login from "./Screens/Login";
+import Signup from "./Screens/Signup";
 
-// Importar tus pantallas
-import Home from "./Screens/Home";
-import Settings from "./Screens/Settings";
-import Stack from "./Screens/Stack";
+const Stack = createNativeStackNavigator();
 
-// Crear el componente de navegación inferior
-const Tab = createBottomTabNavigator();
-
-function MyTabs(){
-    return(
-        <Tab.Navigator
-        initialRouteName="Home"
-        >
-            <Tab.Screen name="Home" component={Home}/>
-            <Tab.Screen name="Settings" component={Settings}/>
-        </Tab.Navigator>
-    );
-}
-
-export default function Navigation(){
-    return(
-        <NavigationContainer>
-            <MyTabs />
-            </NavigationContainer>
-    );
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Welcome'>
+        <Stack.Screen
+          name="Welcome"
+          component={Welcome}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
+          options={{
+            headerShown: false
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
