@@ -7,7 +7,11 @@ const SignupScreen = ({ navigation }) => {
 
   const handleSignup = () => {
     // Aquí puedes implementar la lógica de registro
+    // Por ahora, solo mostraremos los datos en la consola
     console.log("Registrarse con:", email, password);
+
+    // Después del registro exitoso, navegar a la pantalla principal (o la que desees)
+    navigation.navigate("CreateProfile");
   };
 
   return (

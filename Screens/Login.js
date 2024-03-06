@@ -8,6 +8,7 @@ const LoginScreen = ({ navigation }) => {
   const handleLogin = () => {
     // Aquí puedes implementar la lógica de inicio de sesión
     console.log("Iniciar sesión con:", email, password);
+    navigation.navigate("Main");
   };
 
   return (
