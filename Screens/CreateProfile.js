@@ -8,15 +8,13 @@ const CreateProfile = ({ navigation }) => {
   const [bio, setBio] = useState('');
 
   const handleCreateProfile = () => {
-    // Aquí puedes implementar la lógica para crear el perfil del usuario
-    // Por ejemplo, enviar los datos a un servidor, guardarlos localmente, etc.
-    // Después de crear el perfil, puedes navegar a la siguiente pantalla
+    // Aquí puedes implementar la lógica para crear el perfil
     navigation.navigate('Main');
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Create Your Profile</Text>
+      <Text style={styles.title}>PROFILE</Text>
       <TextInput
         style={styles.input}
         placeholder="Username"
@@ -38,7 +36,7 @@ const CreateProfile = ({ navigation }) => {
         onChangeText={setEmail}
       />
       <TextInput
-        style={styles.input}
+        style={[styles.input, styles.bioInput]}
         placeholder="Bio"
         multiline
         numberOfLines={4}
@@ -58,20 +56,27 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 20,
+    backgroundColor: '#E5E5E5',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: '#333',
   },
   input: {
     width: '100%',
     height: 40,
-    borderColor: 'gray',
+    borderColor: '#666',
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
+    backgroundColor: '#fff',
+  },
+  bioInput: {
+    height: 120,
+    textAlignVertical: 'top',
   },
   button: {
     backgroundColor: '#1778F2',
@@ -84,6 +89,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontSize: 16,
+    textAlign: 'center',
   },
 });
 

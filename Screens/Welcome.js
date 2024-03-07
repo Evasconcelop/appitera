@@ -20,7 +20,7 @@ const Welcome = ({ navigation }) => {
                     <Text style={styles.title}>Let's Get</Text>
                     <Text style={styles.title}>Started</Text>
                     <Text style={styles.description}>
-                        Connect with each other with chatting. Calling, Enjoy Safe and private texting.
+                        Connect with each other
                     </Text>
                     <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Signup")}>
                         <Text style={styles.buttonText}>Join Now</Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
-        marginBottom: 10,
+        marginBottom: 2,
     },
     description: {
         fontSize: 16,
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     button: {
-        backgroundColor: '#1778F2',
+        backgroundColor: 'purple',
         paddingHorizontal: 20,
         paddingVertical: 10,
         borderRadius: 8,
