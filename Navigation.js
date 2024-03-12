@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Welcome from "./Screens/Welcome";
 import Login from "./Screens/Login";
 import Signup from "./Screens/Signup";
+import CreateProfile from "./Screens/CreateProfile";
+import Main from "./Screens/Main";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,20 @@ export default function App() {
           options={{
             headerShown: false
           }}
+        />
+         <Stack.Screen
+          name="CreateProfile"
+          component={CreateProfile}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+        name="Main"
+        component={Main}
+        options={{
+          headerShown:false
+        }}
         />
       </Stack.Navigator>
     </NavigationContainer>
